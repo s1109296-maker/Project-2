@@ -92,3 +92,53 @@ function filterFiles(){
 }
 
 loadFileList();
+
+
+/* RUN BFS */
+function runBFS(){
+  let start = prompt("Enter start node:");
+  let steps = structure.bfs(start);
+  animateGraph(steps);
+}
+
+/* RUN DFS */
+function runDFS(){
+  let start = prompt("Enter start node:");
+  let steps = structure.dfs(start);
+  animateGraph(steps);
+}
+
+/* GRAPH ANIMATION ENGINE */
+function animateGraph(steps){
+  let i = 0;
+
+  function step(){
+    if(i >= steps.length) return;
+
+    let s = steps[i];
+
+    if(s.type === "visit"){
+      document.querySelectorAll(".box").forEach(b=>{
+        b.classList.remove("pointer");
+      });
+
+      let node = document.getElementById("node-"+s.current);
+      if(node){
+        node.classList.add("pointer");
+      }
+    }
+
+    if(s.type === "enqueue" || s.type === "explore"){
+      let from = document.getElementById("node-"+s.from);
+      let to = document.getElementById("node-"+s.to);
+
+      if(from) from.style.background = "blue";
+      if(to) to.style.background = "green";
+    }
+
+    i++;
+    setTimeout(step, 800);
+  }
+
+  step();
+}
