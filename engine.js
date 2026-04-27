@@ -7,8 +7,8 @@ function addStep(type){
   if(type==="insert"){
     structure.insert(val);
     steps.push({
-      action: "Insert "+val,
-      state: structure.getState(),
+      action:"Insert "+val,
+      state:structure.getState(),
       line:1
     });
   }
@@ -16,8 +16,8 @@ function addStep(type){
   if(type==="delete"){
     structure.delete();
     steps.push({
-      action: "Delete",
-      state: structure.getState(),
+      action:"Delete",
+      state:structure.getState(),
       line:2
     });
   }
@@ -33,7 +33,7 @@ function nextStep(){
 }
 
 function prevStep(){
-  if(currentStep>0){
+  if(currentStep > 0){
     currentStep--;
     showStep();
   }
