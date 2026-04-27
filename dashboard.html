@@ -1,1 +1,28 @@
-h
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Select Data Structure</h1>
+
+<div class="grid">
+  <button onclick="go('stack')">Stack</button>
+  <button onclick="go('queue')">Queue</button>
+  <button onclick="go('cqueue')">Circular Queue</button>
+  <button onclick="go('linkedlist')">Linked List</button>
+  <button onclick="go('tree')">Tree</button>
+  <button onclick="go('graph')">Graph</button>
+</div>
+
+<script>
+function go(ds){
+  localStorage.setItem("ds", ds);
+  window.location = "workspace.html";
+}
+</script>
+
+</body>
+</html>
