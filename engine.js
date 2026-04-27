@@ -46,3 +46,13 @@ function showStep(){
   render(s.state);
   renderMemory(s.memory);
 }
+
+function addStep(type){
+  let val = document.getElementById("val").value;
+
+  let newSteps = structure.getSteps(type,val);
+
+  steps.push(...newSteps);
+
+  nextStep();
+}
