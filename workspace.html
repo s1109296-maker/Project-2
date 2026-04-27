@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h3>📂 Explorer</h3>
+    <input id="searchBox" placeholder="Search..." oninput="filterFiles()">
+    <div id="fileList"></div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <h2 id="title"></h2>
+
+    <div class="file-system">
+      <input id="dsName" placeholder="Enter name">
+      <button onclick="createDS()">Create</button>
+      <button onclick="saveDS()">Save</button>
+    </div>
+
+    <div class="container">
+      <div class="code-panel">
+        <pre id="code"></pre>
+      </div>
+
+      <div class="visual-panel">
+        <div id="status"></div>
+        <div id="visual"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <input id="val" placeholder="Enter value">
+      <button onclick="addStep('insert')">Insert</button>
+      <button onclick="addStep('delete')">Delete</button>
+      <button onclick="prevStep()">⬅</button>
+      <button onclick="nextStep()">➡</button>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="ds/stack.js"></script>
+<script src="ds/queue.js"></script>
+<script src="ds/circularQueue.js"></script>
+<script src="ds/linkedlist.js"></script>
+<script src="ds/circularLinkedList.js"></script>
+<script src="ds/tree.js"></script>
+<script src="ds/graph.js"></script>
+
+<script src="engine.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
