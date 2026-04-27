@@ -142,3 +142,18 @@ function animateGraph(steps){
 
   step();
 }
+
+
+function renderMemory(mem){
+  let html = "";
+
+  for(let key in mem){
+    html += `
+      <div class="mem-box">
+        <b>${key}</b> : ${JSON.stringify(mem[key])}
+      </div>
+    `;
+  }
+
+  document.getElementById("memory").innerHTML = html;
+}
