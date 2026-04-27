@@ -44,4 +44,5 @@ function showStep(){
   document.getElementById("status").innerText = s.action;
   highlightCode(s.line);
   render(s.state);
+  renderMemory(s.memory);
 }
