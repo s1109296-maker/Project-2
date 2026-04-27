@@ -90,3 +90,33 @@ textarea {
   padding: 10px;
   margin-top: 10px;
 }
+
+.memory-panel {
+  width: 30%;
+  background: #111;
+  padding: 10px;
+  border-left: 2px solid #333;
+}
+
+.mem-box {
+  background: #222;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.pointer-arrow {
+  color: cyan;
+  font-weight: bold;
+}
+
+.node {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+
+.arrow {
+  display: inline-block;
+  margin: 0 5px;
+}
