@@ -157,7 +157,8 @@ function renderMemory(mem){
 
   document.getElementById("memory").innerHTML = html;
 }
-
+if(dsType==="queue") structure = new Queue();
+if(dsType==="tree") structure = new Tree();
 function runTreeBFS(){
   let steps = structure.bfs();
   animateTraversal(steps);
