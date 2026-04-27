@@ -157,3 +157,38 @@ function renderMemory(mem){
 
   document.getElementById("memory").innerHTML = html;
 }
+
+function runTreeBFS(){
+  let steps = structure.bfs();
+  animateTraversal(steps);
+}
+
+function runTreeDFS(){
+  let steps = structure.dfs();
+  animateTraversal(steps);
+}
+
+function animateTraversal(steps){
+  let i = 0;
+
+  function run(){
+    if(i >= steps.length) return;
+
+    let s = steps[i];
+
+    document.getElementById("status").innerText = s.action;
+
+    // highlight node
+    document.querySelectorAll(".box").forEach(b=>{
+      b.classList.remove("pointer");
+    });
+
+    let el = document.querySelector(`.box:contains(${s.current})`);
+    if(el) el.classList.add("pointer");
+
+    i++;
+    setTimeout(run, 800);
+  }
+
+  run();
+}
