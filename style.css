@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg,#141e30,#243b55);
+    color: white;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 25%;
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+}
+
+.main {
+    width: 75%;
+    padding: 15px;
+}
+
+.card {
+    padding: 10px;
+    margin: 10px 0;
+    background: #222;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button {
+    padding: 8px;
+    margin: 5px;
+}
+
+.visual {
+    border: 2px solid white;
+    height: 350px;
+    margin-top: 10px;
+}
+
+#memoryPanel {
+    margin-top: 10px;
+    background: #111;
+    padding: 10px;
+}
