@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<div class="sidebar">
+<h3>Data Structures</h3>
+
+<div class="card" onclick="selectDS('stack')">Stack</div>
+<div class="card" onclick="selectDS('queue')">Queue</div>
+<div class="card" onclick="selectDS('linkedlist')">Linked List</div>
+<div class="card" onclick="selectDS('tree')">Binary Tree</div>
+<div class="card" onclick="selectDS('graph')">Graph</div>
+
+</div>
+
+<div class="main">
+
+<h2 id="title">Select Data Structure</h2>
+
+<div id="operations"></div>
+<div id="fileOptions"></div>
+
+<div class="visual" id="visualArea"></div>
+
+<div id="memoryPanel"></div>
+
+</div>
+
+</div>
+
+<script src="storage.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
